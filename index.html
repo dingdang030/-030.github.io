@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>摇骰子</title>
+<style>
+  body { font-family: sans-serif; text-align: center; padding-top: 60px; background: #f7f7f7; }
+  #dice { font-size: 120px; font-weight: bold; color: #333; margin: 30px; }
+  button { font-size: 24px; padding: 14px 36px; border: none; border-radius: 14px; background: #4CAF50; color: white; }
+</style>
+</head>
+<body>
+  <h1>摇骰子</h1>
+  <div id="dice">1</div>
+  <button onclick="roll()">摇一摇</button>
+  <script>
+    function roll() {
+      const n = Math.floor(Math.random() * 6) + 1;
+      document.getElementById('dice').textContent = n;
+    }
+  </script>
+</body>
+</html>
